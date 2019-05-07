@@ -1,5 +1,19 @@
 // https://leetcode.com/problems/add-strings/description/
 
+// ****************************** My Solution ******************************
+var addStrings = function (num1, num2) {
+    return strToNumber(num1) + strToNumber(num2);
+};
+
+function strToNumber(num) {
+    let sum = 0;
+    for (var i = num.length - 1; i >= 0; i--) {
+        sum += (num.charAt(num.length - i - 1).charCodeAt() - "0".charCodeAt()) * Math.pow(10, i);
+    }
+    return sum;
+}
+
+// ****************************** Previous Solution ******************************
 const add = (s, t) => {
   const w = Math.max(s.length, t.length);
   s = s.padStart(w, '0');
