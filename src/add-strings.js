@@ -2,7 +2,7 @@
 
 // ****************************** My Solution ******************************
 var addStrings = function (num1, num2) {
-    return strToNumber(num1) + strToNumber(num2);
+    return String(strToNumber(num1) + strToNumber(num2));
 };
 
 function strToNumber(num) {
